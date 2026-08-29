@@ -1,0 +1,10 @@
+# Dependencies for data-processing utilities under train-dataprocess/
+pandas>=2.0.0
+numpy>=1.24.0
+tqdm>=4.65.0
+pyyaml>=6.0
+pyarrow>=14.0.0
+
+# For SFT: install LLaMA-Factory from sft/LLaMA-Factory
+# For RL (DualGRPO): install verl from rl/verl-DualGRPO
+# See README for environment setup.

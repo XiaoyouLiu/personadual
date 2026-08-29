@@ -1,0 +1,14 @@
+{
+  "dualsft": {
+    "file_name": "data.json"
+  },
+  "personalsft": {
+    "file_name": "data-personalization.json"
+  },
+  "generalsft": {
+    "file_name": "data-general.json"
+  },
+  "think": {
+    "file_name": "data-think.json"
+  }
+}

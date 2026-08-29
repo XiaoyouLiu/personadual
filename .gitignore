@@ -1,0 +1,51 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.gemini/
+*.swp
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Training / inference outputs
+outputs/
+output/
+checkpoints/
+wandb/
+runs/
+logs/
+*.log
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+
+# Local training dumps
+*.parquet
+sft/LLaMA-Factory/data/*.json
+!sft/LLaMA-Factory/data/dataset_info.json
+evaluation/
+
+# Caches
+hf_cache/
+transformers_cache/
