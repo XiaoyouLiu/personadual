@@ -9,14 +9,12 @@ Two-stage training:
 1. **SFT** — learn two reasoning patterns activated by `[General_mode]` / `[Personalized_mode]`
 2. **DualGRPO** — RL with forced-prefix sampling and inter-/intra-mode advantages for mode selection
 
-Paper authors: Xiaoyou Liu*, Xinyi Mou* (equal contribution), Shengbin Yue, Liang Wang, Yuqing Wang, Qiexiang Wang, Tianrui Qin, Zhongyu Wei (Fudan University / Shanghai Innovation Institute / OPPO).
-
 ## Highlights
 
 - Unified dual-mode reasoning in one model
-- DualGRPO reduces mode imbalance during RL and strengthens prefix learning
+- DualGRPO reduces mode imbalance during RL
 - Mitigates interference from **unaligned** personas on objective QA
-- Leverages **aligned** personas to improve objective accuracy (~+3% on average in the paper)
+- Leverages **aligned** personas to improve objective accuracy 
 
 ## Repository Layout
 
@@ -65,8 +63,6 @@ pip install -r requirements.txt
 |-------|-----------|------|
 | SFT | [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) | `sft/LLaMA-Factory` |
 | RL | [verl](https://github.com/volcengine/verl) (modified) | `rl/verl-DualGRPO` |
-
-Install each backend following its own README (CUDA / Ray / vLLM versions matter).
 
 ## Data
 
@@ -131,8 +127,6 @@ Update in the scripts:
 
 - data train/val files → your parquet paths
 - actor model path → Stage-1 SFT checkpoint
-
-Primary backbone in the paper: **Qwen3-8B-Instruct** (non-thinking); Llama-3.1-8B results in the appendix.
 
 DualGRPO changes vs upstream verl: forced `[General_mode]` / `[Personalized_mode]` prefixes in rollout, dual-mode advantage decomposition in the trainer, and mode-aware reward formatting.
 
